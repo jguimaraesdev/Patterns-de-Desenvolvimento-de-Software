@@ -2,22 +2,34 @@ package Solid_AULA06_AVALIACAO;
 
 public class Motocicleta extends Veiculo implements Iveiculos{
 	
-	protected String _cilindrada;
-	
-	private Motocicleta(String marca, String modelo, double preco, int ano, String cilindrada) {
-		this._marca = marca;
-		this._modelo = modelo;
-		this._preco = preco;
-		this._anoFabricacao = ano;
-		this._cilindrada = cilindrada;
+	String _cilindrada;
+
+	public String salvar() {
+		
+		String sql = String.format("(marca, modelo, anofabricacao, preco, motor, tipo, qtdportas "
+				+ "values(%s, %s, %s, %s, %s, Motocicleta, 0)",
+				this._marca, this._modelo, this._anoFabricacao, this._preco, this._cilindrada);  
+			
+		
+		return sql;
+	}
+
+	public void atualizar() {
+		// TODO Stub de método gerado automaticamente
 		
 	}
-	
-	public static Motocicleta novaMotocicleta(String marca, String modelo, double preco, int ano, String cilindrada) {
-		Motocicleta novo = new Motocicleta(marca, modelo, preco, ano, cilindrada);
+
+	public void deletar(int id) {
+		// TODO Stub de método gerado automaticamente
 		
-		return novo;
 	}
+
+	public Object getById(int id) {
+		// TODO Stub de método gerado automaticamente
+		return null;
+	}
+	
+	
 	
 	
 	

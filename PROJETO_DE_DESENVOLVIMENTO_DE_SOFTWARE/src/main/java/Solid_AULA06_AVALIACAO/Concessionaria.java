@@ -4,20 +4,25 @@ package Solid_AULA06_AVALIACAO;
 public class Concessionaria {
 	
 	
-	protected Iarmazenamento _salvaVeiculo;
-	protected Iveiculos veiculo;
+	private Iarmazenamento estoqueVeiculo;
+	private Iveiculos veiculo;
 	
 //---------------------------------------------------//
 	//injeção de dependencia
 	
-	public Concessionaria(Iarmazenamento novo, Iveiculos tipo) {
-		this._salvaVeiculo = novo;
-		this.veiculo = tipo; 
+	public Concessionaria(Iarmazenamento novo) {
+		this.estoqueVeiculo = novo;
+		 
 	}
 
-
-	public void _salvaVeiculo(Iveiculos veiculo) {
-		_salvaVeiculo.salvar(veiculo);
+	
+	//---------------------------------------------------//
+	
+	public Object carrosConcessionariaView() {
+		
+		
+		return this.estoqueVeiculo.imprimirEstoque();
+		 
 		
 	}
 
@@ -25,7 +30,15 @@ public class Concessionaria {
 	//---------------------------------------------------//
 	
 
-	
+	public Object carrosConcessionariaAdd(Object tipo) {
+		
+		
+		this.estoqueVeiculo.adicionarVeiculo((Iveiculos) tipo);
+		
+		return null;
+		 
+		
+	}
 
 	
 		

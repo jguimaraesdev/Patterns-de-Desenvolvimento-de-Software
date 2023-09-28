@@ -4,21 +4,39 @@ package Solid_AULA06_AVALIACAO;
 
 public class Carro extends Veiculo implements Iveiculos{
 	
-	protected int _nroPortas;
-	private Carro(String marca, String modelo, int portas, double preco, int ano) {
-		this._marca = marca;
-		this._modelo = modelo;
-		this._nroPortas = portas;
-		this._preco = preco;
-		this._anoFabricacao = ano;
+	int _nroPortas;
+	String motor;
+	String _nome = "Carro";
+	
+	public String salvar() {
 		
+		
+		String sql = String.format("%s,%s,%s,%s,%s,%s,%s",
+				this._marca, this._modelo, this._anoFabricacao, this._preco,this.motor, this._nome, this._nroPortas);  
+			
+		
+		return sql;
+	}
+
+	
+	
+	public void atualizar() {
+		// TODO Stub de método gerado automaticamente
+		
+	}
+
+	public void deletar(int id) {
+		// TODO Stub de método gerado automaticamente
+		
+	}
+
+	public Object getById(int id) {
+		// TODO Stub de método gerado automaticamente
+		return null;
 	}
 	
-	static Carro novoCarro(String marca, String modelo, int portas, double preco, int ano) {
-		Carro novo = new Carro(marca, modelo, portas, preco, ano);
-		
-		return novo;
-	}
+	
+	
 
 
 	}
