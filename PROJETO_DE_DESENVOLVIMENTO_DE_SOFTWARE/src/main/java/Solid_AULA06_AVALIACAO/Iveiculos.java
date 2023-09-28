@@ -9,7 +9,7 @@ public interface Iveiculos {
 	
 	public void deletar(int id);
 	
-	public Object getById(int id);
+	
 	
 	
         
