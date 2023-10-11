@@ -1,32 +1,41 @@
 package Atividade_Abstract_Factory;
 
-import java.util.ArrayList;
+import java.util.List;
 
-public class inventarioVestuario implements iInventario {
-	
-	
-	protected ArrayList<iFabricaVestuario> vestuario = new ArrayList<iFabricaVestuario>();
+public class inventarioVestuario extends Estoque implements iInventario {
 	
 	
 	
-	
-	public String adicionar(Object tipo) {
-		vestuario.add((iFabricaVestuario) tipo);
+	public void adicionar(Produto tipo) {
+		this.Vestuario.add(tipo);
 		
-		return "Produto Adicionado";
 	}
 
-	public String remover(Object tipo) {
-		vestuario.remove(tipo);
-		
-		return "Produto removido";
-	}
-
-	public String listar() {
-		for (iFabricaVestuario x : vestuario) {
-			return x.toString();
+	
+	public boolean remover(Produto tipo) {
+		for(Produto x : this.Vestuario) {
+			if(x.SKU.equals(tipo.SKU)) {
+				this.Vestuario.remove(x);
+				return true;
+			}
 		}
-		return null;
-	}
+		return false;
+		
+	
+	}	
+	
 
+
+	public String findAll() {
+		
+		String var = "";
+		
+		for (Produto x : this.Vestuario) {
+			 var = var +"\n"+ x.Nome +"\n"+ x.Preco +"\n" + x.SKU;
+			
+		}
+		
+		return var;
+	}
+	
 }

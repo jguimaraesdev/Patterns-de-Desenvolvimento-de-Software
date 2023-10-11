@@ -2,13 +2,15 @@ package Atividade_Abstract_Factory;
 
 public class NotebookSamsung extends Produto implements iProdutoEletronic{
 
-	public String Selecionar() {
+	public Produto Selecionar() {
 		
-		this.Nome = "Notebook Galaxy Book3 360";
-		this.SKU = "651649464184";
-		this.Preco = "6.500,00";
+		Produto novo = new Produto();
 		
-		return displayinfo();
+		novo.Nome = "Notebook Galaxy Book3 360";
+		novo.SKU = "651649464184";
+		novo.Preco = 65000.0;
+		
+		return novo;
 }
 
 	public String Imprime() {

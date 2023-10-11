@@ -2,13 +2,15 @@ package Atividade_Abstract_Factory;
 
 public class CamisaNike extends Produto implements iProdutoVestuario{
 
-	public String Selecionar() {
+	public Produto Selecionar() {
 		
-		this.Nome = "Camisa Brasil";
-		this.Preco = "349.90";
-		this.SKU = "614313465654";
+		Produto novo = new Produto();
 		
-		return displayinfo();
+		novo.Nome = "Camisa Brasil";
+		novo.Preco = 349.90;
+		novo.SKU = "614313465654";
+		
+		return novo;
 	}
 	
 	public String Imprime() {

@@ -4,7 +4,10 @@ public class Produto {
 	
 	protected String Nome;
 	protected String SKU;
-	protected String Preco;
+	protected double Preco;
+	
+	public Produto() {}
+	
 	
 	
 	public String displayinfo() {
@@ -13,6 +16,10 @@ public class Produto {
 		
 		return modelo;
 	}
+
+
+
+	
 	
 		
 	

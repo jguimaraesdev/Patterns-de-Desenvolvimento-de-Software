@@ -1,36 +1,47 @@
 package Atividade_Abstract_Factory;
 
-import java.util.ArrayList;
 
-public class inventarioEletronic implements iInventario{
-	
-	
-	protected ArrayList<iProdutoEletronic> eletronicos = new ArrayList<iProdutoEletronic>();
+
+public  class inventarioEletronic extends Estoque implements iInventario{
 	
 	
 	
-	public String adicionar(Object tipo) {
-		eletronicos.add((iProdutoEletronic) tipo);
+	public void adicionar(Produto tipo) {
+		this.Eletronicos.add(tipo);
 		
-		return "Produto Adicionado";
+		
 	}
 
-	public String remover(Object tipo) {
-		eletronicos.remove(tipo);
-		
-		return "Produto removido";
-	}
-
-	public String listar() {
-		for (iProdutoEletronic x : eletronicos) {
-			 
-				return x.Imprime().;
+	
+	public boolean remover(Produto tipo) {
+		for(Produto x : this.Eletronicos) {
+			if(x.equals(tipo)) {
+				this.Eletronicos.remove(x);
+				return true;
 			}
-			return null;
+		}
+		return false;
 		
+	
+	}	
+	
+	
+
+
+	public String findAll() {
+		
+		String var = "";
+		
+		
+		for (Produto x : this.Eletronicos) {
+			 var = var +"\n"+ x.Nome +"\n"+ x.Preco +"\n" + x.SKU +"\n";
+			
+		}
+		
+		return var;
+	
 	}
 	
-	
-	
+
 	
 }

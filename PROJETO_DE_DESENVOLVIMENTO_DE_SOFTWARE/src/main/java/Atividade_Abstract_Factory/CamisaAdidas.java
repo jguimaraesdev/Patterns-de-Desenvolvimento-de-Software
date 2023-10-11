@@ -4,14 +4,16 @@ public class CamisaAdidas extends Produto implements iProdutoVestuario {
 
 	
 	
-	public String Selecionar() {
+	public Produto Selecionar() {
 		
-		this.Nome = "Camisa Italia";
-		this.Preco = "359.58";
-		this.SKU = "056431646846654";
+		Produto camisa = new Produto();
+		
+		camisa.Nome = "Camisa Italia";
+		camisa.Preco = 359.58;
+		camisa.SKU = "056431646846654";
 		
 		
-		return displayinfo();
+		return camisa;
 	}
 	
 	public String Imprime() {

@@ -1,6 +1,6 @@
 package Atividade_Abstract_Factory;
 
 public interface iProdutoVestuario {
-	String Selecionar();
+	Produto Selecionar();
 	public String Imprime();
 }

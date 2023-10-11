@@ -5,19 +5,24 @@ package Atividade_Abstract_Factory;
 public class NotebookApple extends Produto implements iProdutoEletronic{
 	
 	
-	public String Selecionar() {
+	public Produto Selecionar() {
 		
-		this.Nome = "MacBook Air";
-		this.SKU = "16519849819641";
-		this.Preco = "7.600,00";
+		Produto novo = new Produto();
 		
-		return displayinfo();
+		novo.Nome = "MacBook Air";
+		novo.SKU = "16519849819641";
+		novo.Preco = 76000.0;
+		
+		return novo;
 }
 	
 	
 	public String Imprime() {
 		return displayinfo();
 	}
+
+
+	
 	
 	
 	

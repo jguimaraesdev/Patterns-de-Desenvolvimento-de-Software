@@ -2,14 +2,16 @@ package Atividade_Abstract_Factory;
 
 public class TenisAdidas extends Produto implements iProdutoVestuario{
 
-	public String Selecionar() {
+	public Produto Selecionar() {
 		
-		this.Nome = "Tenis Adizero Pro3";
-		this.Preco = "2.099,00";
-		this.SKU = "654659875665";
+		Produto novo = new Produto();
+		
+		novo.Nome = "Tenis Adizero Pro3";
+		novo.Preco = 20990.0;
+		novo.SKU = "654659875665";
 		
 		
-		return displayinfo();
+		return novo;
 	}
 	
 	public String Imprime() {

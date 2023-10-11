@@ -15,7 +15,7 @@ public class Samsung implements iFabricaEletronic{
 
 	public iInventario manager() {
 		
-		return new inventarioEletronic();
+		return  new inventarioEletronic();
 	}
 
 	

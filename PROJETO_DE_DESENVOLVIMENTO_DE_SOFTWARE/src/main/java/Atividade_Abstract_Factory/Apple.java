@@ -6,7 +6,6 @@ public class Apple implements iFabricaEletronic{
 	
 	
 	
-	
 	public iProdutoEletronic fabricarNotebook() {
 		return new NotebookApple() ;
 	}
@@ -18,8 +17,10 @@ public class Apple implements iFabricaEletronic{
 
 	public iInventario manager() {
 		
-		return new inventarioEletronic();
+		return  new inventarioEletronic();
 	}
+
+
 
 	
 
