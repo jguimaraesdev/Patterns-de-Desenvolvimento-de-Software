@@ -1,14 +1,17 @@
 package Atividade_Abstract_Factory;
 
-import java.util.List;
+
 
 public class inventarioVestuario extends Estoque implements iInventario {
 	
 	
 	
-	public void adicionar(Produto tipo) {
-		this.Vestuario.add(tipo);
-		
+	public boolean adicionar(Produto tipo) {
+		if(tipo != null) {
+			this.Vestuario.add(tipo);
+			return true;
+		}
+		return false;
 	}
 
 	
@@ -26,16 +29,20 @@ public class inventarioVestuario extends Estoque implements iInventario {
 	
 
 
-	public String findAll() {
+	public void findAllCliente() {
 		
-		String var = "";
 		
 		for (Produto x : this.Vestuario) {
-			 var = var +"\n"+ x.Nome +"\n"+ x.Preco +"\n" + x.SKU;
+			
+			x.displayinfo();
+					 
 			
 		}
 		
-		return var;
+	
+	
 	}
+
+
 	
 }

@@ -7,16 +7,10 @@ public class SmartphoneSamsung extends Produto  implements iProdutoEletronic{
 		Produto novo = new Produto();
 		novo.Nome = "Samsung S23";
 		novo.SKU = "123644789623";
-		novo.Preco = 37000.0;
+		novo.Preco = 3700.00;
 		
 		return novo;
 	}
-	
-	public String Imprime() {
-		
-		return displayinfo();
-	}
-
 	
 
 }

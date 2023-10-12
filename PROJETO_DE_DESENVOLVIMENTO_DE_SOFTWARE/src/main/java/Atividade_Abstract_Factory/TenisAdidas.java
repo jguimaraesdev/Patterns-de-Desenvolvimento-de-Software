@@ -7,16 +7,13 @@ public class TenisAdidas extends Produto implements iProdutoVestuario{
 		Produto novo = new Produto();
 		
 		novo.Nome = "Tenis Adizero Pro3";
-		novo.Preco = 20990.0;
+		novo.Preco = 2099.00;
 		novo.SKU = "654659875665";
 		
 		
 		return novo;
 	}
 	
-	public String Imprime() {
-		
-		return displayinfo();
-	}
+	
 
 }

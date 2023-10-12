@@ -9,7 +9,7 @@ public class Estoque {
 	
 	protected ArrayList<Produto> Vestuario= new ArrayList<Produto>();
 
-	
+
 	
 	
 	

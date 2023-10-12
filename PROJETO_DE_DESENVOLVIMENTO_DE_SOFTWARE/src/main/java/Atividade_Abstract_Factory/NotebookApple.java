@@ -11,21 +11,9 @@ public class NotebookApple extends Produto implements iProdutoEletronic{
 		
 		novo.Nome = "MacBook Air";
 		novo.SKU = "16519849819641";
-		novo.Preco = 76000.0;
+		novo.Preco = 7600.00;
 		
 		return novo;
-}
-	
-	
-	public String Imprime() {
-		return displayinfo();
 	}
-
-
-	
-	
-	
-	
-	
 	
 }

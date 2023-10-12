@@ -6,9 +6,12 @@ public  class inventarioEletronic extends Estoque implements iInventario{
 	
 	
 	
-	public void adicionar(Produto tipo) {
-		this.Eletronicos.add(tipo);
-		
+	public boolean adicionar(Produto tipo) {
+		if(tipo != null) {
+			this.Eletronicos.add(tipo);
+			return true;
+		}
+		return false;
 		
 	}
 
@@ -28,20 +31,18 @@ public  class inventarioEletronic extends Estoque implements iInventario{
 	
 
 
-	public String findAll() {
+	public void findAllCliente() {
 		
-		String var = "";
-		
-		
+	
 		for (Produto x : this.Eletronicos) {
-			 var = var +"\n"+ x.Nome +"\n"+ x.Preco +"\n" + x.SKU +"\n";
+			x.displayinfo();
+			
 			
 		}
 		
-		return var;
+	
 	
 	}
-	
 
 	
 }

@@ -9,16 +9,10 @@ public class SmartphoneIphone extends Produto implements iProdutoEletronic {
 		
 		novo.Nome = "Iphone 14";
 		novo.SKU =  "456987712389"; 
-		novo.Preco = 50000.0;
+		novo.Preco = 5000.00;
 		
 			
 		return novo;
-	}
-	
-	
-	public String Imprime() {
-		
-		return displayinfo();
 	}
 	
 }

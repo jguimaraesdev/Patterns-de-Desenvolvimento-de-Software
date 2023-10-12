@@ -13,8 +13,5 @@ public class CamisaNike extends Produto implements iProdutoVestuario{
 		return novo;
 	}
 	
-	public String Imprime() {
-		
-		return displayinfo();
-	}
+	
 }

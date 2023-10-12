@@ -5,7 +5,7 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		/*
+		
 		iFabricaVestuario fabrica = new Adidas(); //Esta parte se converterá em parâmetro de ambiente
 		ConsumidorVestuario consumidor = new ConsumidorVestuario(fabrica);
 		
@@ -14,23 +14,28 @@ public class App {
 		
 		consumidor.estoque.adicionar(consumidor.camisa.Selecionar());
 		consumidor.estoque.adicionar(consumidor.tenis.Selecionar());
-		consumidor.estoque.adicionar(consumidor.camisa.Selecionar());
-		consumidor.estoque.adicionar(consumidor.tenis.Selecionar());
+		consumidor1.estoque.adicionar(consumidor1.camisa.Selecionar());
+		consumidor1.estoque.adicionar(consumidor1.tenis.Selecionar());
+		
+		consumidor.estoque.findAllCliente();
+		consumidor1.estoque.findAllCliente();
+
+		
+		iFabricaEletronic fabrica2 = new Samsung(); 
+		ConsumidorEletronico consumidor2 = new ConsumidorEletronico(fabrica2);
+	
+		consumidor2.estoque.adicionar(consumidor2.notebook.Selecionar());
+		consumidor2.estoque.adicionar(consumidor2.celular.Selecionar());
 		
 		
+		iFabricaEletronic fabrica3 = new Apple(); 
+		ConsumidorEletronico consumidor3 = new ConsumidorEletronico(fabrica3);
+		consumidor3.estoque.adicionar(consumidor3.notebook.Selecionar());
+		consumidor3.estoque.adicionar(consumidor3.celular.Selecionar());
 		
-		System.out.println(consumidor1.estoque.findAll());
+		consumidor2.estoque.findAllCliente();
+		consumidor3.estoque.findAllCliente();
 		
-		*/
-		
-		
-		iFabricaEletronic fabrica = new Samsung(); //Esta parte se converterá em parâmetro de ambiente
-		ConsumidorEletronico consumidor = new ConsumidorEletronico(fabrica);
-		
-		consumidor.estoque.adicionar(consumidor.notebook.Selecionar());
-		consumidor.estoque.adicionar(consumidor.celular.Selecionar());
-		
-		System.out.println(consumidor.estoque.findAll());
 		
 	}
 

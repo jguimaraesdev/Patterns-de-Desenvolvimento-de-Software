@@ -10,7 +10,7 @@ public class Adidas implements iFabricaVestuario{
 
 	public iProdutoVestuario faricaCamisa() {
 		
-		return new CamisaNike();
+		return new CamisaAdidas();
 	}
 
 	public iInventario manager() {

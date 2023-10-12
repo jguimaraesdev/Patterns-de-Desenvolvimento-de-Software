@@ -10,11 +10,11 @@ public class Produto {
 	
 	
 	
-	public String displayinfo() {
+	public void displayinfo() {
 		
-		String modelo = "Produto: " +Nome +"\nCOD: "+ SKU+"\nPreco: " + Preco+"\n";
+		System.out.printf("\nPRODUTO: %s \nPRECO: %.2f \nSKU: %s\n", Nome, Preco, SKU);
 		
-		return modelo;
+		
 	}
 
 
