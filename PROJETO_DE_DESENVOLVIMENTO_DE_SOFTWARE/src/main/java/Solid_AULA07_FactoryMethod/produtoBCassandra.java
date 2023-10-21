@@ -1,4 +1,4 @@
-package Solid_AULA_07_FactoryMethod;
+package Solid_AULA07_FactoryMethod;
 
 public class produtoBCassandra implements iProduto{
 
