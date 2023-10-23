@@ -1,4 +1,4 @@
-package AtividadePolimorfismo1e2;
+package Atividade_Polimorfismo_1e2;
 
 import java.lang.Math;
 
