@@ -7,83 +7,68 @@ import java.util.UUID;
 
 import Solid_AULA08_Observer.ABSObserver;
 
-public class orderTracker implements iObservable{
-	
+public class orderTracker extends Order implements iObservable{
 	
 
-	private List<Observer> orders = new ArrayList<>();
 	
 	
+	private List<Observer> observers = new ArrayList<>();
+	 
 	
-	
-	@Override
-	public void addOrder(Observer o) {
-		
-		this.orders.add(o);
+
+	public orderTracker(String  customerName) {
+	    this.orderId =UUID.randomUUID(); // Gera um identificador único para o pedido
+	    this.status = "Pendente";
+	    this.location = "Armazém";
+	    this.customerName = customerName;
 	}
-
-
-	@Override
-	public void updateOrderStatus(UUID orderId, String newStatus) {
-		
-		for(Observer x: orders) {
-			
-		 if (x.order.getOrderId() == orderId) {
-	            
-	            x.order.setStatus(newStatus);
-		 }
-		}
-	}
-
-
-
-	@Override
-	public void updateOrderLocation(UUID orderId, String newLocation) {
-		
-		for(Observer x: orders) {
-			
-			 if (x.order.getOrderId() == orderId) {
-		            
-		            x.order.setLocation(newLocation);
-			 }
-		}
-		
-	}
-
-
-
-
-	@Override
-	public void listOrders() {
 		
 		
-		for(Observer x: getOrders()) {
+	//---------------------------------------------------------------------------------//
 	
-			  System.out.println(x);
-		                    
-		}
+	
+	public Object retornaOrder() {
 		
+		return this.orderId;
 	}
 	
-	@Override
-	public void notifyObservers(Object arg) {
 		
-		for (Observer observer : orders) {
-            observer.update(arg);
+		
+	public void updateStatus(String newStatus) {
+		  this.status = newStatus;
+		  this.notifyObservers();
+		  
+		  System.out.println("\nStatus mudou para '" + status + "'");
+	}
+
+	public void updateLocation(String newLocation) {
+		  this.location = newLocation;
+		  System.out.println("Localização do Pedido mudou para '" + location +"'");
+	}
+		
+
+	 
+	@Override
+	public void addObserver(Observer observer) {
+		this.observers.add(observer);
+		
+	}
+
+	@Override
+	public void removeObserver(Observer observer) {
+		observers.remove(observer);
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		for (Observer x : observers) {
+            x.update();
         }
 		
 	}
-
 	
-	//---------------------------------------------------------------------------------//
-	
-	public List<Observer> getOrders() {
-		return orders;
-	}
-
-
-	public void setOrders(List<Observer> orders) {
-		this.orders = orders;
-	}
 }
-	   
+	
+	
+	

@@ -2,30 +2,30 @@ package Atividade_Observer;
 
 
 
-class ConcreteObserver extends Observer {
+class ConcreteObserver implements Observer {
 	
-	protected iObservable tracker;
+	protected iObservable pedido;
 	
-	public ConcreteObserver() {}
 	
-    public ConcreteObserver(Order order) {
-        this.order= order;
-        this.order.addOrder(this);
+	
+    public ConcreteObserver(orderTracker order) {
+    	this.pedido = order;
+        this.pedido.addObserver(this);
+        
+        
     }
+
+	@Override
+	public void update() {
+		System.out.print("\nNotificação para " +pedido.retornaOrder());
+				;
+		
+	}
 
    
 
-	public void update(Object arg) {
-		
-       
-		System.out.println("Notificação para Pedido '" + this.order.getOrderId() + "' mudou para '" + arg +"'");
-    	
-	}
 	
 	
-	public void imprimeObservers() {
-		tracker.listOrders();
-	}
 }
 
 
