@@ -17,8 +17,8 @@ class ConcreteObserver implements Observer {
 
 	@Override
 	public void update() {
-		System.out.print("\nNotificação para " +pedido.retornaOrder());
-				;
+		System.out.print("\nNotificação para " + pedido.retornaOrder());
+				
 		
 	}
 

@@ -10,7 +10,7 @@ public class main {
 		orderTracker observado = new orderTracker("joão");
 		
 		ConcreteObserver ob1 = new ConcreteObserver(observado);
-		observado.updateStatus("Saida para entrega");
+		observado.updateStatus("Saida para entrega ontem");
 		
 		
 	}
