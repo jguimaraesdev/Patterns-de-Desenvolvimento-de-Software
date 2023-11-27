@@ -2,15 +2,13 @@ package Avaliacao_Semestral_Ecomeerce;
 
 public class Visa implements iBandeiraCartao{
 	
-	@Override
-	public String Pagar(Cartao cartao, Double valor) {
-		if(cartao.limite < valor) {
-			return "Compra Aprovada";
-		}else {
-			return "Compra não aprovada";
-		}
-		
-		
-	}
+	 
+	 
+	 @Override
+	    public String Pagar(Double valor) {
+	       
+	        return "Pagamento de R$" + valor + " com Visa aprovado.";
+	    }
 	
+	 
 }
